@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/blockprintstripewp.jpg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 435.567, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 474.533, 587.207 )
+scale = Vector2( 1.24286, 0.0341963 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 474.72, 587.598 )
+shape = SubResource( 1 )
+
+[node name="slime_default" parent="." instance=ExtResource( 1 )]
+position = Vector2( 188.489, 68.8339 )
