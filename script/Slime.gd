@@ -26,7 +26,7 @@ var velocity = Vector2()
 func get_input():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func change_form():
@@ -45,5 +45,3 @@ func change_into(form):
 		var instance = form.resource.instance()
 		instance.set_position(get_position())
 		get_parent().add_child(instance)
-	else:
-		print(get_name())

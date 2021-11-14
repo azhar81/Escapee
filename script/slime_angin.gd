@@ -4,7 +4,7 @@ onready var sprite = $AnimatedSprite
 
 var was_falling = false
 
-func _process(delta):
+func _process(_delta):
 	velocity.y = 20
 	if is_on_floor():
 		velocity += get_floor_velocity()

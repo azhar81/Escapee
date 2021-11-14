@@ -25,6 +25,9 @@ func _process(delta):
 func get_input():
 	velocity.x = 0
 
+func is_falling():
+	return was_falling
+
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "land":
 		was_falling = false

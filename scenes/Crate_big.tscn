@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/image/props.png" type="Texture" id=1]
+[ext_resource path="res://script/crates.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 48, 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.9652, 15.9955 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.7101, 0.787642 )
+
+[node name="Crate_big" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="collision_batu" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision_batu"]
+position = Vector2( 1.90735e-06, -15.8135 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="collision_batu" to="." method="_on_collision_batu_body_entered"]

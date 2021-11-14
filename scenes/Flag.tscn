@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/image/props.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 48, 16, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5.53672, 14.9109 )
+
+[node name="Flag" type="Area2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.41827, 0.917702 )
+shape = SubResource( 2 )
