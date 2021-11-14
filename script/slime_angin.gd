@@ -1,13 +1,11 @@
 extends Slime
 
-export (int) var GRAVITY = 500
-
 onready var sprite = $AnimatedSprite
 
 var was_falling = false
 
 func _process(delta):
-	velocity.y += delta * GRAVITY
+	velocity.y = 20
 	if is_on_floor():
 		velocity += get_floor_velocity()
 	get_input()
@@ -20,14 +18,12 @@ func _process(delta):
 		sprite.play("land")
 	elif velocity.y != 0:
 		was_falling = true
-		sprite.play("jump")
+		sprite.play("glide")
 	else:
 		sprite.play("move")
 
 func get_input():
 	velocity.x = 0
-	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
-		velocity.y = jump_speed
 
 	if Input.is_action_pressed('ui_right'):
 		sprite.set_flip_h(false)
