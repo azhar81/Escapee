@@ -12,7 +12,7 @@ region = Rect2( 16, 48, 32, 32 )
 extents = Vector2( 15.9652, 15.9955 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 15.7101, 0.787642 )
+extents = Vector2( 16.1875, 16.25 )
 
 [node name="Crate_big" type="StaticBody2D"]
 script = ExtResource( 2 )
@@ -26,7 +26,6 @@ shape = SubResource( 2 )
 [node name="collision_batu" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collision_batu"]
-position = Vector2( 1.90735e-06, -15.8135 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="collision_batu" to="." method="_on_collision_batu_body_entered"]
