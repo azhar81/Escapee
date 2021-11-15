@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/image/props.png" type="Texture" id=1]
+[ext_resource path="res://script/Deth.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -9,9 +10,12 @@ region = Rect2( 48, 32, 16, 16 )
 
 [node name="Spike_up" type="Area2D"]
 rotation = -1.5708
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -8.05574, -7.95955, -8.09512, 7.98633, -5.69339, 8.06507, 7.96888, 1.56861, 8.04762, -1.30559, -5.61465, -7.95955 )
+
+[connection signal="body_entered" from="." to="." method="_on_Spike_up_body_entered"]

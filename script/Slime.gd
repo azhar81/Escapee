@@ -45,3 +45,6 @@ func change_into(form):
 		var instance = form.resource.instance()
 		instance.set_position(get_position())
 		get_parent().add_child(instance)
+
+func dead():
+	get_tree().change_scene("res://scenes/temp_map.tscn")
