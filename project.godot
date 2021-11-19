@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Escapee"
-run/main_scene="res://scenes/temp_map.tscn"
+run/main_scene="res://scenes/Level 1.tscn"
 config/icon="res://icon.png"
 
 [input]
