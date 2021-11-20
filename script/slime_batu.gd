@@ -1,6 +1,6 @@
 extends Slime
 
-export (int) var GRAVITY = 700
+export (int) var GRAVITY = 1400
 
 onready var sprite = $AnimatedSprite
 
