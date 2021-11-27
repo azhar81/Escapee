@@ -34,10 +34,10 @@ func change_form():
 	if Input.is_action_just_pressed("slime_default"):
 		change_into(default)
 	
-	elif Input.is_action_just_pressed("slime_angin"):
+	elif Input.is_action_just_pressed("slime_angin") and Global.has_wind:
 		change_into(angin)
 	
-	elif Input.is_action_just_pressed("slime_batu"):
+	elif Input.is_action_just_pressed("slime_batu") and Global.has_rock:
 		change_into(batu)
 
 func change_into(form):
@@ -49,10 +49,16 @@ func change_into(form):
 		get_parent().add_child(instance)
 
 func dead():
-	get_tree().change_scene("res://scenes/temp_map.tscn")
+	get_tree().reload_current_scene()
 
 func set_velocity(vel):
 	velocity = vel
 
 func get_velocity():
 	return velocity
+
+func obtained_wind():
+	Global.has_wind = true
+
+func obtained_rock():
+	Global.has_rock = true
