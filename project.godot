@@ -24,6 +24,10 @@ config/name="Escapee"
 run/main_scene="res://scenes/jump-tut.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://script/Global.gd"
+
 [input]
 
 slime_default={
