@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Spike_up.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Area Trigger.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,11 +31,6 @@ scene = "Level 2"
 [node name="Area Trigger3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1119.42, 395.684 )
 scale = Vector2( 1, 25.756 )
-scene = "Level 2"
-
-[node name="Area Trigger4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 824, 367 )
-scale = Vector2( 1, 2 )
 scene = "Level 2"
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -293,3 +289,7 @@ scene = "wind-tut3"
 position = Vector2( 288.61, 400 )
 rotation = 4.71239
 scene = "wind-tut3"
+
+[node name="Flag" parent="." instance=ExtResource( 5 )]
+position = Vector2( 826, 360 )
+scene = "Level 2"
