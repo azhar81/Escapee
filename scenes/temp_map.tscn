@@ -43,7 +43,7 @@ position = Vector2( 713.467, 224.121 )
 
 [node name="Area Trigger" parent="." instance=ExtResource( 5 )]
 position = Vector2( 506.286, 664.914 )
-scale = Vector2( 60, 1 )
+scale = Vector2( 60, 12.973 )
 
 [node name="Area Trigger2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -105.29, 403.015 )

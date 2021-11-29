@@ -1,13 +1,13 @@
 extends Slime
 
-export (int) var GRAVITY = 800
+export (int) var GRAVITY = 1400
 
 onready var sprite = $AnimatedSprite
 
 var was_falling = false
 
 func _process(delta):
-	velocity.y += GRAVITY
+	velocity.y += GRAVITY * delta
 	if is_on_floor():
 		velocity += get_floor_velocity()
 	get_input()
