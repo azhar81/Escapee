@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Escapee"
-run/main_scene="res://scenes/temp_map.tscn"
+run/main_scene="res://scenes/jump-tut.tscn"
 config/icon="res://icon.png"
 
 [autoload]

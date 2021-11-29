@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Area Trigger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Spike_up.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=6]
 
 [node name="Node2D" type="Node2D"]
@@ -37,78 +38,97 @@ scene = "Level 2"
 [node name="Spike_up" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 672, 176 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up2" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 674.96, 195.699 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up3" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 674.399, 211.974 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up4" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 673.838, 229.934 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up5" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 674.399, 247.332 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up6" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675.521, 264.73 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up7" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 674.96, 282.128 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up8" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 674.399, 300.088 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up9" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675.734, 317.441 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up10" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675.734, 336.128 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up11" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675.734, 353.481 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up12" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675.066, 368.832 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up13" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675.066, 384.182 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up32" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675, 400 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up33" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 675, 416 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up55" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 899.066, 448 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up56" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 899, 463.818 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up57" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 899, 479.818 )
 rotation = -3.14159
+scene = "Level 2"
 
 [node name="Spike_up34" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 688, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up35" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 704, 432 )
@@ -117,10 +137,12 @@ rotation = 1.5708
 [node name="Spike_up36" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 704, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up37" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 720, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up38" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 736, 432 )
@@ -129,10 +151,12 @@ rotation = 1.5708
 [node name="Spike_up39" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 736, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up40" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 752, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up41" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 768, 432 )
@@ -141,10 +165,12 @@ rotation = 1.5708
 [node name="Spike_up42" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 768, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up43" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 784, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up44" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 800, 432 )
@@ -153,10 +179,12 @@ rotation = 1.5708
 [node name="Spike_up45" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 800, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up46" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 816, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up47" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 832, 432 )
@@ -165,10 +193,12 @@ rotation = 1.5708
 [node name="Spike_up48" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 832, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up49" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 848, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up50" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 864, 432 )
@@ -177,10 +207,12 @@ rotation = 1.5708
 [node name="Spike_up51" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 864, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up52" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 880, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up53" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 896, 432 )
@@ -189,80 +221,98 @@ rotation = 1.5708
 [node name="Spike_up54" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 896, 432 )
 rotation = 1.5708
+scene = "Level 2"
 
 [node name="Spike_up14" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 532.231, 510.755 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up15" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 549.909, 510.755 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up16" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 564.758, 509.34 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up17" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 580.314, 510.048 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up18" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 596.578, 510.048 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up19" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 612.841, 509.34 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up20" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 627.69, 509.34 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up21" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 643.247, 510.755 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up22" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 658.803, 511.462 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up23" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 674.359, 510.048 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up24" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 689.916, 511.462 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up25" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 707.593, 510.048 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up26" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 723.857, 510.048 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up27" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 739.413, 511.462 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up28" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 757.091, 510.048 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up29" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 773.354, 509.34 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up30" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 788.911, 510.755 )
 rotation = 4.71239
+scene = "Level 2"
 
 [node name="Spike_up31" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 806.588, 509.34 )
 rotation = 4.71239
+scene = "Level 2"
 
-[node name="Area Trigger4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 952, 504 )
-scale = Vector2( 1, 2 )
+[node name="Flag" parent="." instance=ExtResource( 4 )]
+position = Vector2( 960, 503 )
 scene = "Level 3"
