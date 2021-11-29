@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/Button_up.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Spike_up.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Area Trigger.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Elemen_batu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Elemen_angin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Elemen_batu_alt.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Elemen_angin_alt.tscn" type="PackedScene" id=10]
+[ext_resource path="res://script/camera.gd" type="Script" id=11]
+[ext_resource path="res://script/maps.gd" type="Script" id=12]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+rotating = true
+current = true
+script = ExtResource( 11 )
+
+[node name="Button_up" parent="." instance=ExtResource( 3 )]
+position = Vector2( 207.518, 291.118 )
+
+[node name="Platform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 483.962, 243.589 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 8, -280 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1048596, 2, 0, 1048597, 2, 1, 1048598, 2, 1, 1048599, 2, 1, 1048600, 2, 1, 1048601, 2, 1, 1048602, 2, 1, 1048603, 2, 1, 1048604, 2, 2, 1114132, 2, 65536, 1114133, 2, 65537, 1114134, 2, 65537, 1114135, 2, 65537, 1114136, 2, 65537, 1114137, 2, 65537, 1114138, 2, 65537, 1114139, 2, 65537, 1114140, 2, 65538, 1179649, 2, 0, 1179650, 2, 1, 1179651, 2, 1, 1179652, 2, 1, 1179653, 2, 1, 1179654, 2, 1, 1179655, 2, 1, 1179656, 2, 1, 1179657, 2, 1, 1179658, 2, 1, 1179659, 2, 1, 1179660, 2, 196609, 1179661, 2, 196609, 1179662, 2, 196609, 1179663, 2, 196610, 1179668, 2, 131072, 1179669, 2, 131073, 1179670, 2, 131073, 1179671, 2, 131073, 1179672, 2, 131073, 1179673, 2, 131073, 1179674, 2, 131073, 1179675, 2, 131073, 1179676, 2, 131074, 1245185, 2, 65536, 1245186, 2, 65537, 1245187, 2, 65537, 1245188, 2, 65537, 1245189, 2, 65537, 1245190, 2, 65537, 1245191, 2, 65537, 1245192, 2, 65537, 1245193, 2, 65537, 1245194, 2, 65537, 1245195, 2, 65538, 1310721, 2, 65536, 1310722, 2, 65537, 1310723, 2, 65537, 1310724, 2, 65537, 1310725, 2, 65537, 1310726, 2, 65537, 1310727, 2, 65537, 1310728, 2, 65537, 1310729, 2, 65537, 1310730, 2, 65537, 1310731, 2, 65538, 1376257, 2, 131072, 1376258, 2, 131073, 1376259, 2, 131073, 1376260, 2, 131073, 1376261, 2, 131073, 1376262, 2, 131073, 1376263, 2, 131073, 1376264, 2, 131073, 1376265, 2, 131073, 1376266, 2, 131073, 1376267, 2, 131073, 1376268, 2, 196609, 1376269, 2, 196609, 1376270, 2, 196609, 1376271, 2, 196610 )
+
+[node name="Spike_up" parent="." instance=ExtResource( 4 )]
+position = Vector2( 697.421, 223.885 )
+
+[node name="Spike_up2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 713.467, 224.121 )
+
+[node name="Area Trigger" parent="." instance=ExtResource( 5 )]
+position = Vector2( 506.286, 664.914 )
+scale = Vector2( 60, 12.973 )
+
+[node name="Area Trigger2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -105.29, 403.015 )
+scale = Vector2( 1, 25.039 )
+
+[node name="Area Trigger3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1119.42, 395.684 )
+scale = Vector2( 1, 25.756 )
+
+[node name="Elemen" parent="." instance=ExtResource( 8 )]
+position = Vector2( 416.457, 379.741 )
+
+[node name="Elemen" parent="Elemen" instance=ExtResource( 10 )]
+position = Vector2( -154.608, -141.701 )
+
+[node name="Elemen2" parent="Elemen" instance=ExtResource( 9 )]
+position = Vector2( -115.959, -146.458 )
+
+[node name="Elemen2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 457.89, 380.438 )
+
+[node name="Area Trigger4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 878.566, 209.429 )
+scene = "Level 1"
+
+[node name="Slime" type="Node" parent="."]
+
+[node name="slime_default" parent="Slime" instance=ExtResource( 1 )]
+position = Vector2( 146.313, 287.846 )
