@@ -1,0 +1,295 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/Spike_up.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Area Trigger.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 40, -488 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1310720, 2, 0, 1310721, 2, 1, 1310722, 2, 1, 1310723, 2, 1, 1310724, 2, 1, 1310725, 2, 1, 1310726, 2, 1, 1310727, 2, 1, 1310728, 2, 1, 1310729, 2, 1, 1310730, 2, 1, 1310731, 2, 1, 1310732, 2, 1, 1310733, 2, 1, 1310734, 2, 1, 1310735, 2, 1, 1310736, 2, 1, 1310737, 2, 1, 1310738, 2, 1, 1310739, 2, 1, 1310740, 2, 1, 1310741, 2, 1, 1310742, 2, 1, 1310743, 2, 1, 1310744, 2, 2, 1376256, 2, 65536, 1376257, 2, 65537, 1376258, 2, 65537, 1376259, 2, 65537, 1376260, 2, 65537, 1376261, 2, 65537, 1376262, 2, 65537, 1376263, 2, 65537, 1376264, 2, 65537, 1376265, 2, 65537, 1376266, 2, 65537, 1376267, 2, 65537, 1376268, 2, 65537, 1376269, 2, 65537, 1376270, 2, 65537, 1376271, 2, 65537, 1376272, 2, 65537, 1376273, 2, 65537, 1376274, 2, 65537, 1376275, 2, 65537, 1376276, 2, 65537, 1376277, 2, 65537, 1376278, 2, 65537, 1376279, 2, 65537, 1376280, 2, 65538, 1441792, 2, 65536, 1441793, 2, 65537, 1441794, 2, 65537, 1441795, 2, 65537, 1441796, 2, 65537, 1441797, 2, 65537, 1441798, 2, 65537, 1441799, 2, 65537, 1441800, 2, 65537, 1441801, 2, 65537, 1441802, 2, 65537, 1441803, 2, 65537, 1441804, 2, 65537, 1441805, 2, 65537, 1441806, 2, 65537, 1441807, 2, 65537, 1441808, 2, 65537, 1441809, 2, 65537, 1441810, 2, 65537, 1441811, 2, 65537, 1441812, 2, 65537, 1441813, 2, 65537, 1441814, 2, 65537, 1441815, 2, 65537, 1441816, 2, 65538, 1507328, 2, 65536, 1507329, 2, 65537, 1507330, 2, 65537, 1507331, 2, 65537, 1507332, 2, 65537, 1507333, 2, 65537, 1507334, 2, 65537, 1507335, 2, 65537, 1507336, 2, 4, 1507337, 2, 131073, 1507338, 2, 131073, 1507339, 2, 131073, 1507340, 2, 131073, 1507341, 2, 131073, 1507342, 2, 131073, 1507343, 2, 131073, 1507344, 2, 131073, 1507345, 2, 131073, 1507346, 2, 131073, 1507347, 2, 131073, 1507348, 2, 131073, 1507349, 2, 131073, 1507350, 2, 131073, 1507351, 2, 5, 1507352, 2, 65538, 1572864, 2, 65536, 1572865, 2, 131073, 1572866, 2, 131073, 1572867, 2, 131073, 1572868, 2, 131073, 1572869, 2, 131073, 1572870, 2, 131073, 1572871, 2, 131073, 1572872, 2, 131074, 1572887, 2, 65536, 1572888, 2, 65538, 1638400, 2, 65536, 1638423, 2, 131072, 1638424, 2, 131074, 1703936, 2, 65536, 1769472, 2, 65536, 1769473, 2, 1, 1769474, 2, 1, 1769475, 2, 1, 1769476, 2, 2, 1769480, 2, 0, 1769481, 2, 1, 1769482, 2, 1, 1769483, 2, 1, 1769484, 2, 1, 1769485, 2, 1, 1769486, 2, 1, 1769487, 2, 1, 1769488, 2, 1, 1769489, 2, 1, 1769490, 2, 1, 1769491, 2, 1, 1769492, 2, 1, 1769493, 2, 1, 1769494, 2, 1, 1769495, 2, 1, 1769496, 2, 2, 1835008, 2, 65536, 1835009, 2, 65537, 1835010, 2, 65537, 1835011, 2, 65537, 1835012, 2, 65540, 1835013, 2, 1, 1835014, 2, 1, 1835015, 2, 1, 1835016, 2, 65541, 1835017, 2, 65537, 1835018, 2, 65537, 1835019, 2, 65537, 1835020, 2, 65537, 1835021, 2, 65537, 1835022, 2, 65537, 1835023, 2, 65537, 1835024, 2, 65537, 1835025, 2, 65537, 1835026, 2, 65537, 1835027, 2, 65537, 1835028, 2, 65537, 1835029, 2, 65537, 1835030, 2, 65537, 1835031, 2, 65537, 1835032, 2, 65538, 1900544, 2, 131072, 1900545, 2, 131073, 1900546, 2, 131073, 1900547, 2, 131073, 1900548, 2, 131073, 1900549, 2, 131073, 1900550, 2, 131073, 1900551, 2, 131073, 1900552, 2, 131073, 1900553, 2, 131073, 1900554, 2, 131073, 1900555, 2, 131073, 1900556, 2, 131073, 1900557, 2, 131073, 1900558, 2, 131073, 1900559, 2, 131073, 1900560, 2, 131073, 1900561, 2, 131073, 1900562, 2, 131073, 1900563, 2, 131073, 1900564, 2, 131073, 1900565, 2, 131073, 1900566, 2, 131073, 1900567, 2, 131073, 1900568, 2, 131074 )
+
+[node name="slime_default" parent="." instance=ExtResource( 4 )]
+position = Vector2( 88, 368 )
+
+[node name="Area Trigger" parent="." instance=ExtResource( 3 )]
+position = Vector2( 506.286, 664.914 )
+scale = Vector2( 60, 1 )
+scene = "wind-tut3"
+
+[node name="Area Trigger2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -105.29, 403.015 )
+scale = Vector2( 1, 25.039 )
+scene = "Level 2"
+
+[node name="Area Trigger3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1119.42, 395.684 )
+scale = Vector2( 1, 25.756 )
+scene = "Level 2"
+
+[node name="Area Trigger4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 824, 367 )
+scale = Vector2( 1, 2 )
+scene = "Level 2"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Spike_up58" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 403, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up59" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 419, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up60" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 435, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up61" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 451, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up62" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 451, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up63" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 467, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up64" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 483, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up65" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 499, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up66" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 515, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up67" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 531, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up68" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 547, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up69" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 563, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up70" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 579, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up71" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 595, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up72" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 611, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up73" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 627, 288 )
+rotation = 1.5708
+scene = "wind-tut3"
+
+[node name="Spike_up14" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 419, 367 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up26" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 403, 367 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up15" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 435, 367 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up16" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 451, 366.66 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up17" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 467.314, 366.708 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up18" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 483.578, 366.708 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up19" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 499.841, 367 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up27" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 419, 367 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up28" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 403, 367 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up29" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 435, 367 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up30" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 451, 366.66 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up31" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 467.314, 366.708 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up74" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 483.578, 366.708 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up75" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 499.841, 367 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up76" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 531, 367.34 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up77" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 515, 367.34 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up78" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 547, 367.34 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up79" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 563, 367 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up80" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 579.314, 367.048 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up81" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 595.578, 367.048 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up82" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 611.841, 367.34 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up83" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 531, 367.34 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up84" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 515, 367.34 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up85" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 547, 367.34 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up86" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 563, 367 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up87" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 579.314, 367.048 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up88" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 595.578, 367.048 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up89" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 611.841, 367.34 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up90" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 627, 367 )
+rotation = 4.70248
+scene = "wind-tut3"
+
+[node name="Spike_up20" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 208, 401.415 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up21" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 221.909, 401.415 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up22" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 239.769, 400.66 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up23" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 256.083, 400.708 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up24" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 272.347, 400.708 )
+rotation = 4.71239
+scene = "wind-tut3"
+
+[node name="Spike_up25" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 288.61, 400 )
+rotation = 4.71239
+scene = "wind-tut3"

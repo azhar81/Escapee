@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/Button_up.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Spike_up.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Crate_big.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Area Trigger.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=6]
@@ -10,26 +10,52 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Button_up" parent="." instance=ExtResource( 1 )]
-position = Vector2( 207.518, 291.118 )
-
-[node name="Platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 483.962, 243.589 )
+position = Vector2( 395.683, 436.998 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 8, -280 )
+position = Vector2( -4.47253, -424.326 )
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 1048596, 2, 0, 1048597, 2, 1, 1048598, 2, 1, 1048599, 2, 1, 1048600, 2, 1, 1048601, 2, 1, 1048602, 2, 1, 1048603, 2, 1, 1048604, 2, 2, 1114132, 2, 65536, 1114133, 2, 65537, 1114134, 2, 65537, 1114135, 2, 65537, 1114136, 2, 65537, 1114137, 2, 65537, 1114138, 2, 65537, 1114139, 2, 65537, 1114140, 2, 65538, 1179649, 2, 0, 1179650, 2, 1, 1179651, 2, 1, 1179652, 2, 1, 1179653, 2, 1, 1179654, 2, 1, 1179655, 2, 1, 1179656, 2, 1, 1179657, 2, 1, 1179658, 2, 1, 1179659, 2, 1, 1179660, 2, 1, 1179661, 2, 1, 1179662, 2, 2, 1179668, 2, 131072, 1179669, 2, 131073, 1179670, 2, 131073, 1179671, 2, 131073, 1179672, 2, 131073, 1179673, 2, 131073, 1179674, 2, 131073, 1179675, 2, 131073, 1179676, 2, 131074, 1245185, 2, 65536, 1245186, 2, 65537, 1245187, 2, 65537, 1245188, 2, 65537, 1245189, 2, 65537, 1245190, 2, 65537, 1245191, 2, 65537, 1245192, 2, 65537, 1245193, 2, 65537, 1245194, 2, 65537, 1245195, 2, 65537, 1245196, 2, 65537, 1245197, 2, 65537, 1245198, 2, 65538, 1310721, 2, 65536, 1310722, 2, 65537, 1310723, 2, 65537, 1310724, 2, 65537, 1310725, 2, 65537, 1310726, 2, 65537, 1310727, 2, 65537, 1310728, 2, 65537, 1310729, 2, 65537, 1310730, 2, 65537, 1310731, 2, 65537, 1310732, 2, 65537, 1310733, 2, 65537, 1310734, 2, 65538, 1376257, 2, 131072, 1376258, 2, 131073, 1376259, 2, 131073, 1376260, 2, 131073, 1376261, 2, 131073, 1376262, 2, 131073, 1376263, 2, 131073, 1376264, 2, 131073, 1376265, 2, 131073, 1376266, 2, 131073, 1376267, 2, 131073, 1376268, 2, 131073, 1376269, 2, 131073, 1376270, 2, 131074 )
+tile_data = PoolIntArray( 983041, 2, 131073, 983042, 2, 131073, 983043, 2, 131073, 983044, 2, 131073, 983045, 2, 131073, 983046, 2, 131073, 983047, 2, 131073, 983048, 2, 131073, 983049, 2, 5, 1048585, 2, 65536, 1048596, 2, 0, 1048597, 2, 1, 1048598, 2, 1, 1048599, 2, 1, 1048600, 2, 1, 1048601, 2, 1, 1048602, 2, 1, 1048603, 2, 1, 1048604, 2, 1, 1048605, 2, 1, 1048606, 2, 2, 1114121, 2, 65536, 1114132, 2, 65536, 1114133, 2, 65537, 1114134, 2, 65537, 1114135, 2, 65537, 1114136, 2, 65537, 1114137, 2, 65537, 1114138, 2, 65537, 1114139, 2, 65537, 1114140, 2, 65537, 1114141, 2, 65537, 1114142, 2, 65538, 1179649, 2, 0, 1179650, 2, 1, 1179651, 2, 1, 1179652, 2, 1, 1179653, 2, 1, 1179654, 2, 1, 1179655, 2, 2, 1179657, 2, 65536, 1179668, 2, 65536, 1179669, 2, 131073, 1179670, 2, 131073, 1179671, 2, 131073, 1179672, 2, 131073, 1179673, 2, 131073, 1179674, 2, 131073, 1179675, 2, 131073, 1179676, 2, 5, 1179677, 2, 65537, 1179678, 2, 65538, 1245185, 2, 65536, 1245186, 2, 65537, 1245187, 2, 65537, 1245188, 2, 65537, 1245189, 2, 65537, 1245190, 2, 65537, 1245191, 2, 65538, 1245193, 2, 65536, 1245204, 2, 65536, 1245212, 2, 131072, 1245213, 2, 131073, 1245214, 2, 131074, 1310721, 2, 65536, 1310722, 2, 65537, 1310723, 2, 65537, 1310724, 2, 65537, 1310725, 2, 65537, 1310726, 2, 65537, 1310727, 2, 65538, 1310729, 2, 65536, 1376257, 2, 65536, 1376258, 2, 65537, 1376259, 2, 65537, 1376260, 2, 65537, 1376261, 2, 65537, 1376262, 2, 65537, 1376263, 2, 65538, 1376265, 2, 65536, 1376278, 2, 1, 1376279, 2, 1, 1376280, 2, 1, 1376281, 2, 1, 1376282, 2, 1, 1376283, 2, 1, 1376284, 2, 1, 1376285, 2, 1, 1376286, 2, 1, 1441793, 2, 65536, 1441794, 2, 65537, 1441795, 2, 65537, 1441796, 2, 65537, 1441797, 2, 65537, 1441798, 2, 65537, 1441799, 2, 65538, 1441801, 2, 65536, 1507329, 2, 65536, 1507330, 2, 65537, 1507331, 2, 65537, 1507332, 2, 65537, 1507333, 2, 65537, 1507334, 2, 65537, 1507335, 2, 65538, 1507337, 2, 65536, 1572865, 2, 65536, 1572866, 2, 65537, 1572867, 2, 65537, 1572868, 2, 65537, 1572869, 2, 65537, 1572870, 2, 65537, 1572871, 2, 65538, 1572873, 2, 131072, 1572874, 2, 131073, 1572875, 2, 131073, 1572876, 2, 131073, 1572877, 2, 131073, 1638401, 2, 131072, 1638402, 2, 131073, 1638403, 2, 131073, 1638404, 2, 131073, 1638405, 2, 131073, 1638406, 2, 131073, 1638407, 2, 131074, 1769481, 2, 1, 1769482, 2, 1, 1769483, 2, 1, 1769484, 2, 1, 1769485, 2, 1, 1769486, 2, 1, 1769487, 2, 1, 1769488, 2, 1, 1769489, 2, 1, 1769490, 2, 1, 1769491, 2, 1, 1769492, 2, 1, 1769493, 2, 1, 1769494, 2, 1 )
 
-[node name="Spike_up" parent="." instance=ExtResource( 2 )]
-position = Vector2( 697.421, 223.885 )
+[node name="Crate_big4" parent="TileMap" instance=ExtResource( 3 )]
+position = Vector2( 555.27, 421.592 )
 
-[node name="Spike_up2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 713.467, 224.121 )
+[node name="Spike_up" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 582.661, 431.7 )
+scene = "Level 1"
+
+[node name="Spike_up2" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 600.434, 431.254 )
+scene = "Level 1"
+
+[node name="Spike_up9" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 547.161, 430.7 )
+scene = "Level 1"
+
+[node name="Spike_up10" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 564.934, 430.254 )
+scene = "Level 1"
+
+[node name="Spike_up3" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 618.661, 430.7 )
+scene = "Level 1"
+
+[node name="Spike_up4" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 636.434, 431.254 )
+scene = "Level 1"
+
+[node name="Spike_up5" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 653.161, 431.2 )
+scene = "Level 1"
+
+[node name="Spike_up6" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 670.934, 430.754 )
+scene = "Level 1"
 
 [node name="slime_default" parent="." instance=ExtResource( 4 )]
-position = Vector2( 90.9725, 287.426 )
+position = Vector2( 52.6639, 146.664 )
 
 [node name="Area Trigger" parent="." instance=ExtResource( 5 )]
 position = Vector2( 506.286, 664.914 )
@@ -46,7 +72,113 @@ position = Vector2( 1119.42, 395.684 )
 scale = Vector2( 1, 25.756 )
 scene = "Level 1"
 
+[node name="Area Trigger5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 976, 232 )
+scale = Vector2( 1, 2 )
+scene = "Win Screen"
+
 [node name="Area Trigger4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 921.109, 209.316 )
+position = Vector2( 1408.43, 151.408 )
 scale = Vector2( 1, 2 )
 scene = "Level 2"
+
+[node name="Crate_big" parent="." instance=ExtResource( 3 )]
+position = Vector2( 268.271, 196.838 )
+
+[node name="Crate_big2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 268.271, 229.586 )
+
+[node name="Crate_big3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 269.064, 262.921 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Spike_up" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 582.661, 431.7 )
+scene = "Level 1"
+
+[node name="Spike_up2" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 600.434, 431.254 )
+scene = "Level 1"
+
+[node name="Spike_up9" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 547.161, 430.7 )
+scene = "Level 1"
+
+[node name="Spike_up10" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 564.934, 430.254 )
+scene = "Level 1"
+
+[node name="Spike_up3" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 618.661, 430.7 )
+scene = "Level 1"
+
+[node name="Spike_up4" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 636.434, 431.254 )
+scene = "Level 1"
+
+[node name="Spike_up5" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 653.161, 431.2 )
+scene = "Level 1"
+
+[node name="Spike_up6" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 670.934, 430.754 )
+scene = "Level 1"
+
+[node name="Spike_up7" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 688.161, 431.2 )
+scene = "Level 1"
+
+[node name="Spike_up8" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 704.934, 430.754 )
+scene = "Level 1"
+
+[node name="Spike_up20" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 721, 431 )
+scene = "Level 1"
+
+[node name="Spike_up21" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 627, 190 )
+rotation = 3.14159
+scene = "Level 1"
+
+[node name="Spike_up22" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 627, 207 )
+rotation = 3.14159
+scene = "Level 1"
+
+[node name="Spike_up11" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 325, 335.446 )
+scene = "Level 1"
+
+[node name="Spike_up12" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 342.773, 335 )
+scene = "Level 1"
+
+[node name="Spike_up13" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 360, 335.446 )
+scene = "Level 1"
+
+[node name="Spike_up14" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 376.773, 335 )
+scene = "Level 1"
+
+[node name="Spike_up15" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 394, 335.446 )
+scene = "Level 1"
+
+[node name="Spike_up16" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 410.773, 335 )
+scene = "Level 1"
+
+[node name="Spike_up17" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 394, 335.446 )
+scene = "Level 1"
+
+[node name="Spike_up18" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 410.773, 335 )
+scene = "Level 1"
+
+[node name="Spike_up19" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 429, 335 )
+scene = "Level 1"
