@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Camera2D",
+"class": "ShakeCamera2D",
+"language": "GDScript",
+"path": "res://script/camera.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Slime",
 "language": "GDScript",
 "path": "res://script/Slime.gd"
 } ]
 _global_script_class_icons={
+"ShakeCamera2D": "",
 "Slime": ""
 }
 

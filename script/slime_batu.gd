@@ -1,13 +1,13 @@
 extends Slime
 
-export (int) var GRAVITY = 1400
+export (int) var GRAVITY = 800
 
 onready var sprite = $AnimatedSprite
 
 var was_falling = false
 
 func _process(delta):
-	velocity.y += delta * GRAVITY
+	velocity.y += GRAVITY
 	if is_on_floor():
 		velocity += get_floor_velocity()
 	get_input()
@@ -17,6 +17,7 @@ func _process(delta):
 	if velocity == Vector2.ZERO and not was_falling:
 		sprite.play("idle")
 	elif velocity.y == 0 and was_falling:
+		slam()
 		sprite.play("land")
 	elif velocity.y != 0:
 		was_falling = true
@@ -31,3 +32,7 @@ func is_falling():
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "land":
 		was_falling = false
+
+func slam():
+	if sprite.animation != "land":
+		emit_signal("slam")
