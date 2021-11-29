@@ -297,5 +297,5 @@ scene = "Level 2"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -40.0
+volume_db = -30.0
 autoplay = true
