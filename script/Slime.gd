@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal slam
+signal transformed(slime)
+
 class_name Slime
 
 var speed = 200
@@ -47,6 +50,7 @@ func change_into(form):
 		instance.set_position(get_position())
 		instance.set_velocity(get_velocity())
 		get_parent().add_child(instance)
+		emit_signal("transformed", instance)
 
 func dead():
 	get_tree().reload_current_scene()
