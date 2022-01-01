@@ -3,6 +3,7 @@ extends Slime
 export (int) var GRAVITY = 1400
 
 onready var sprite = $AnimatedSprite
+onready var sfx = $"rock slime sfx"
 
 var was_falling = false
 
@@ -35,4 +36,5 @@ func _on_AnimatedSprite_animation_finished():
 
 func slam():
 	if sprite.animation != "land":
+		sfx.play()
 		emit_signal("slam")
