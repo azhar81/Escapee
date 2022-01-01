@@ -1,7 +1,7 @@
 extends Slime
 
 onready var sprite = $AnimatedSprite
-onready var sfx = $AudioStreamPlayer
+onready var sfx = $"wind slime sfx"
 
 var was_falling = false
 var acceleration = 0.07

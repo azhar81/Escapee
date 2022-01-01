@@ -5,7 +5,7 @@ var acceleration = 0.1
 var friction = 0.05
 
 onready var sprite = $AnimatedSprite
-onready var sfx = $AudioStreamPlayer
+onready var sfx = $"slime sfx"
 
 var was_falling = false
 var play_move_sfx = true
