@@ -6,6 +6,7 @@ var friction = 0.05
 
 onready var sprite = $AnimatedSprite
 onready var sfx = $"slime sfx"
+onready var jump_sfx = $"jump sfx"
 
 var was_falling = false
 var play_move_sfx = true
@@ -38,6 +39,7 @@ func get_input():
 	input_velocity = Vector2.ZERO
 
 	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
+		jump_sfx.play()
 		velocity.y += jump_speed
 	
 	if Input.is_action_just_released("ui_up") && velocity.y < 0:
