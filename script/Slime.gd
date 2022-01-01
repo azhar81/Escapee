@@ -34,14 +34,18 @@ func _process(_delta):
 	pass
 
 func change_form():
-	if Input.is_action_just_pressed("slime_default"):
+	if not is_on_floor():
+		if Input.is_action_just_pressed("ui_up") and Global.has_wind:
+			change_into(angin)
+		
+		elif Input.is_action_just_pressed("ui_down") and Global.has_rock:
+			change_into(batu)
+	
+	if Input.is_action_just_released("ui_up"):
+			change_into(default)
+		
+	elif Input.is_action_just_released("ui_down"):
 		change_into(default)
-	
-	elif Input.is_action_just_pressed("slime_angin") and Global.has_wind:
-		change_into(angin)
-	
-	elif Input.is_action_just_pressed("slime_batu") and Global.has_rock:
-		change_into(batu)
 
 func change_into(form):
 	if form.name != get_name():
