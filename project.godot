@@ -33,6 +33,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://script/Global.gd"
+GameAudio="*res://scenes/game audio.tscn"
 
 [input]
 
