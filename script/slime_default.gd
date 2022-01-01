@@ -5,6 +5,7 @@ var acceleration = 0.1
 var friction = 0.05
 
 onready var sprite = $AnimatedSprite
+onready var sfx = $AudioStreamPlayer
 
 var was_falling = false
 
@@ -19,14 +20,18 @@ func _process(delta):
 	if is_on_floor():
 		if input_velocity == Vector2.ZERO and not was_falling:
 			sprite.play("idle")
+			sfx.stop()
 		elif was_falling:
 			sprite.play("land")
+			sfx.play()
 		else:
 			sprite.play("move")
+			sfx.play()
 	
 	else:
 		was_falling = true
 		sprite.play("jump")
+		sfx.stop()
 
 func get_input():
 	input_velocity = Vector2.ZERO

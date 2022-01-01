@@ -1,6 +1,7 @@
 extends Slime
 
 onready var sprite = $AnimatedSprite
+onready var sfx = $AudioStreamPlayer
 
 var was_falling = false
 var acceleration = 0.07
@@ -15,6 +16,7 @@ func _process(_delta):
 	velocity = move_and_slide(velocity, UP)
 	
 	if is_on_floor():
+		sfx.stop()
 		if input_velocity == Vector2.ZERO and not was_falling:
 			sprite.play("idle")
 		elif was_falling:
@@ -25,6 +27,7 @@ func _process(_delta):
 	else:
 		was_falling = true
 		sprite.play("glide")
+		sfx.play()
 
 func get_input():
 	input_velocity = Vector2.ZERO
