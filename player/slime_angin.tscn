@@ -72,7 +72,6 @@ shape = SubResource( 7 )
 [node name="wind slime sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -30.0
-autoplay = true
 
 [node name="background audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
