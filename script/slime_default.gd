@@ -8,6 +8,7 @@ onready var sprite = $AnimatedSprite
 onready var sfx = $AudioStreamPlayer
 
 var was_falling = false
+var play_move_sfx = true
 
 func _process(delta):
 	velocity.y += delta * GRAVITY
@@ -20,18 +21,18 @@ func _process(delta):
 	if is_on_floor():
 		if input_velocity == Vector2.ZERO and not was_falling:
 			sprite.play("idle")
-			sfx.stop()
+			set_sfx_state_to(false)
 		elif was_falling:
 			sprite.play("land")
-			sfx.play()
+			set_sfx_state_to(true)
 		else:
 			sprite.play("move")
-			sfx.play()
+			set_sfx_state_to(true)
 	
 	else:
 		was_falling = true
 		sprite.play("jump")
-		sfx.stop()
+		set_sfx_state_to(false)
 
 func get_input():
 	input_velocity = Vector2.ZERO
@@ -58,3 +59,12 @@ func get_input():
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "land":
 		was_falling = false
+
+func set_sfx_state_to(state):
+	if play_move_sfx != state:
+		if state:
+			sfx.play()
+		else:
+			sfx.stop()
+		play_move_sfx = state
+			
