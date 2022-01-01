@@ -145,7 +145,7 @@ scene = "Level 1"
 
 [node name="Flag" parent="." instance=ExtResource( 7 )]
 position = Vector2( 978, 232 )
-scene = "Win Screen"
+scene = "End"
 
 [node name="Elemen2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 143.617, 141.066 )

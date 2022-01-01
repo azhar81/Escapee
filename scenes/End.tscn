@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/image/end.png" type="Texture" id=1]
 [ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/font/Minecraftia-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/sounds/winner win.wav" type="AudioStream" id=4]
+[ext_resource path="res://script/End.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 955.863, 39.0934 )
@@ -20,6 +21,7 @@ size = 20
 font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -84,4 +86,3 @@ __meta__ = {
 [node name="winner audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -30.0
-autoplay = true
