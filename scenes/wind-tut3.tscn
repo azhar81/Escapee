@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/platform_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Spike_up.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Area Trigger.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/slime_default.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/sounds/background audio.wav" type="AudioStream" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -293,3 +294,8 @@ scene = "wind-tut3"
 [node name="Flag" parent="." instance=ExtResource( 5 )]
 position = Vector2( 826, 360 )
 scene = "Level 2"
+
+[node name="background music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -30.0
+autoplay = true
