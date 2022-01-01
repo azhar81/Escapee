@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sounds/loser lost.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/you lost screen.png" type="Texture" id=2]
+
+[node name="Node2D" type="Sprite"]
+position = Vector2( 543.414, 303.545 )
+scale = Vector2( 1.69192, 1.69192 )
+texture = ExtResource( 2 )
+
+[node name="defeat sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -25.0
+autoplay = true

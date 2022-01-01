@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://player/slime_default_spriteframe.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://script/slime_default.gd" type="Script" id=2]
 [ext_resource path="res://assets/sounds/new slime sfx 2.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/background audio.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9.75592, 8.41732 )
@@ -20,9 +21,14 @@ animation = "idle"
 position = Vector2( 0, -0.297638 )
 shape = SubResource( 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="slime sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -25.0
+autoplay = true
+
+[node name="background audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -30.0
 autoplay = true
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
